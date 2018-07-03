@@ -1,16 +1,20 @@
-Lines l;
-
-Flares[] flares = new Flares[30];
+Lines[] l = new Lines[30];
 
 void setup()
 {
-  size(displayWidth, displayHeight);
+  size(displayWidth, displayHeight, P2D);
   noStroke();
-  l = new Lines();
+  for (int i = 0; i < l.length; i++)
+  {
+    l[i] = new Lines();
+  }
 }
 
 void draw()
 {
-  background(#e53935);
-  
+  background(#d32f2f);
+  for (int i = 0; i < l.length; i++)
+  {
+    l[i].call();
+  }
 }
